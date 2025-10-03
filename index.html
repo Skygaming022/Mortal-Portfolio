@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Het Patel — Portfolio</title>
-  <meta name="description" content="I am a motion graphic editor, creating visuals and web experiences for businesses and creators." />
+  <meta name="description" content="I am a 3D Minecraft thumbnail designer, creating thumbnails and visuals for YouTubers and gaming content creators." />
   <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   <style>
     :root{
@@ -97,7 +97,7 @@
         <div class="logo">H</div>
         <div>
           <div style="font-weight:700">Het Patel</div>
-          <div class="small">Designer • Developer • Creator</div>
+          <div class="small">3D Minecraft Thumbnail Designer</div>
         </div>
       </div>
       <nav>
@@ -106,6 +106,129 @@
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <h1>Hi — I'm <span style="color:var(--accent)">Het Patel</span></h1>
+          <p class="lead">I create stunning 3D Minecraft thumbnails and visuals for YouTubers, streamers, and gaming content creators. Available for custom projects and ongoing collaborations.</p>
+          <div class="cta">
+            <a class="btn" href="#contact">Hire me</a>
+            <a class="ghost" href="#work">See work</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>3+</strong><div class="small">Years experience</div></div>
+            <div class="stat"><strong>50+</strong><div class="small">Projects</div></div>
+            <div class="stat"><strong>10</strong><div class="small">Trusted clients</div></div>
+          </div>
+        </div>
+
+        <aside class="profile card">
+          <div class="avatar">Upload a photo or replace this block</div>
+          <div style="width:100%">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-weight:700">Let's talk</div>
+                <div class="small">Open to interesting projects</div>
+              </div>
+              <div style="text-align:right">
+                <div class="small">Location</div>
+                <div style="font-weight:700">Your City</div>
+              </div>
+            </div>
+            <div class="contact">
+              <a class="btn" href="mailto:you@example.com">Email</a>
+              <a class="ghost" href="#contact">Message</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="card">
+          <h2>About</h2>
+          <p class="lead">
+            I am a 3D Minecraft thumbnail designer, creating eye-catching thumbnails and visuals for YouTubers, streamers, and gaming content creators. My work combines vibrant 3D elements, detailed characters, and dynamic compositions to make your content stand out online.
+          </p>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services">
+        <h2 style="margin-bottom:12px">Services</h2>
+        <div class="grid">
+          <div class="service card">
+            <h3>3D Minecraft Thumbnails</h3>
+            <p class="small">Custom thumbnails for YouTube, Twitch, and social media, with detailed 3D characters and backgrounds.</p>
+          </div>
+          <div class="service card">
+            <h3>Banner & Channel Art</h3>
+            <p class="small">Eye-catching banners, profile headers, and promotional visuals for gaming channels.</p>
+          </div>
+          <div class="service card">
+            <h3>Graphic Enhancements</h3>
+            <p class="small">Special effects, text effects, and cinematic compositions to boost your content’s visual appeal.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Section -->
+      <section id="work">
+        <h2 style="margin-bottom:12px">Selected Work</h2>
+        <div class="portfolio-grid">
+          <div class="item">Project 1 — replace with image</div>
+          <div class="item">Project 2 — replace with image</div>
+          <div class="item">Project 3 — replace with image</div>
+          <div class="item">Project 4 — replace with image</div>
+          <div class="item">Project 5 — replace with image</div>
+          <div class="item">Project 6 — replace with image</div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2 style="margin-bottom:12px">Contact</h2>
+        <div class="card">
+          <form onsubmit="handleContact(event)">
+            <label for="name">Your name</label>
+            <input id="name" required placeholder="e.g. Het Patel" />
+
+            <label for="email">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com" />
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Tell me about your project"></textarea>
+
+            <button class="btn" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="small">© <span id="year"></span> Het Patel • Built with ❤️</div>
+      <div class="small">Discord: legendmortalop</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Website contact from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = `mailto:you@example.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+  </html>      </nav>
     </header>
 
     <main>
